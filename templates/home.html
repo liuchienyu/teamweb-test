@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block body %}
+{%for x in code_results%}
 <div class="container-fluid justify-content-between align-items-center">
   <div class="row">
     <div id="myCarousel" class="col-12 carousel slide mx-auto mt-3 mb-3" data-bs-ride="carousel">
@@ -45,25 +46,17 @@
 
 <div class="container-fluid mt-5">
   <div class="row text-center">
-    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5 text-center">
       <h2>最新公告</h2>
-      <table class="table text-center border-1">
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-      </table>
+
+        <table class="table text-center border-1">
+          <tr>
+            <td>{{x['code_date']}}</td>
+            <td>{{x['announcement_category']}}</td>
+            <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
+          </tr>
+        </table>
+
     </div>
   </div>
     
@@ -72,19 +65,9 @@
       <h2>營隊資訊</h2>
       <table class="table text-center border-1">
         <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
+          <td>{{x['code_date']}}</td>
+          <td>{{x['announcement_category']}}</td>
+          <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
         </tr>
       </table>
     </div>
@@ -95,19 +78,9 @@
       <h2>團隊公告</h2>
       <table class="table text-center border-1">
         <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
+          <td>{{x['code_date']}}</td>
+          <td>{{x['announcement_category']}}</td>
+          <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
         </tr>
       </table>
     </div>
@@ -118,19 +91,9 @@
       <h2>招募資訊</h2>
       <table class="table text-center border-1">
         <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
-        </tr>
-        <tr>
-          <td>標題1</td>
-          <td>標題2</td>
-          <td>標題3</td>
+          <td>{{x['code_date']}}</td>
+          <td>{{x['announcement_category']}}</td>
+          <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
         </tr>
       </table>
     </div>
@@ -185,5 +148,5 @@
     </div>
   </div>
 </div>-->
-
+{%endfor%}
 {% endblock body %}

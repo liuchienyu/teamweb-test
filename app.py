@@ -1,5 +1,10 @@
 from flask import Flask, redirect, render_template, url_for
+from pymongo import MongoClient
+import pymongo
 app = Flask(__name__)
+CONNECTION_STRING ="mongodb+srv://dandy40605:1234@cluster0.qqbqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+client = MongoClient(CONNECTION_STRING,tls=True, tlsAllowInvalidCertificates=True,tz_aware=True )#tls=True, tlsAllowInvalidCertificates=True為解決無法連線問題
+
 
 @app.route("/")
 def homepage():
@@ -7,7 +12,12 @@ def homepage():
 
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    db = client.webdata
+    document_code_data = db.news
+    code_results = document_code_data.find({'category':'公告'})
+    code_results.sort("make_time",pymongo.DESCENDING)#按照時間降序排列
+    code_results.limit(10)#限制數量
+    return render_template("home.html",code_results=code_results)
 
 @app.route("/news")
 def news():
