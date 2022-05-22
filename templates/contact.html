@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="/static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<main>
+    <div class="wrapper">
+        <div class="inner">
+            <form action="">
+                <h3>與我們聯絡</h3>
+                <p>想要了解更多資訊，或是告訴我們您所遇到的問題，我們會盡快派員與您聯繫，感謝您的耐心回覆！
+                </p>
+                <label class="form-group">
+                    <input type="text" class="form-control"
+                        style="font-family: 'Montserrat-Regular'; color: #fff; font-size: 15px;" required>
+                    <span>您的姓名</span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"
+                        style="font-family: 'Montserrat-Regular'; color: #fff; font-size: 15px;" required>
+                    <span for="">您的電子信箱</span>
+                </label>
+                <label class="form-group">
+                    <textarea name="" id="" class="form-control text-white" style="height:50px;"required></textarea>
+                    <span for="">想要詢問或是告訴我們什麼內容</span>
+                </label>
+                <button class="button1">送出
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock body %}

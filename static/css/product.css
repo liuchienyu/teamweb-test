@@ -1,0 +1,121 @@
+body {
+    background-color: #FFFF;
+}
+
+.container {
+    max-width: 960px;
+}
+
+
+/*
+   * Custom translucent site header
+   */
+
+.site-header {
+    background-color: #2A0944;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #FEC260;
+    transition: color .15s ease-in-out;
+}
+
+.site-header h5 {
+    color: #FEC260;
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #A12568;
+    text-decoration: none;
+}
+
+.site-header button a{
+    color: white;
+}
+
+/*
+   * Dummy devices (replace them with your own or something else entirely!)
+   */
+
+
+/*
+  .product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+  }
+  
+  .product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+  }
+  
+  .product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+  }
+  */
+
+
+/*
+   * Extra utilities
+   */
+
+.flex-equal>* {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal>* {
+        flex: 1;
+    }
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0%;
+    left: 100%;
+    margin-top: -3px;
+}
+
+.dropdown-menu>li>a:hover:after {
+    transform: rotate(-90deg);
+    transition: 1s;
+}
+
+@media (min-width: 960px) {
+    .nav-item button{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 960px) {
+    .nav-item button{
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+}
