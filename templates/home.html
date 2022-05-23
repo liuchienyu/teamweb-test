@@ -46,54 +46,60 @@
 
 <div class="container-fluid mt-5">
   <div class="row text-center">
-    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5 text-center">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5 table-responsive">
       <h2>最新公告</h2>
-
-        <table class="table text-center border-1">
-          <tr>
-            <td>{{x['code_date']}}</td>
-            <td>{{x['announcement_category']}}</td>
-            <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
-          </tr>
-        </table>
-
+      <table class="table text-center" style="table-layout : fixed;">
+        <tr>
+          <td>{{x['code_date']}}</td>
+          <td>{{x['announcement_category']}}</td>
+          <td><a href="/announcement/{{x['search_id']}}">
+              <p>{{x['subject']}}</p>
+            </a></td>
+        </tr>
+      </table>
     </div>
   </div>
-    
+
   <div class="row text-center">
-    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5 table-responsive">
       <h2>營隊資訊</h2>
-      <table class="table text-center border-1">
+      <table class="table text-center" style="table-layout : fixed;">
         <tr>
           <td>{{x['code_date']}}</td>
           <td>{{x['announcement_category']}}</td>
-          <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
+          <td><a href="/announcement/{{x['search_id']}}">
+              <p>{{x['subject']}}</p>
+            </a></td>
         </tr>
       </table>
     </div>
   </div>
 
   <div class="row text-center">
-    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5 table-responsive">
       <h2>團隊公告</h2>
-      <table class="table text-center border-1">
+      <table class="table text-center" style="table-layout : fixed;">
         <tr>
           <td>{{x['code_date']}}</td>
           <td>{{x['announcement_category']}}</td>
-          <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
+          <td><a href="/announcement/{{x['search_id']}}">
+              <p>{{x['subject']}}</p>
+            </a></td>
         </tr>
       </table>
     </div>
   </div>
 
   <div class="row text-center">
-    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5">
+    <div class="col-12 col-md-10 col-lg-8 mx-auto mb-5 table-responsive">
       <h2>招募資訊</h2>
-      <table class="table text-center border-1">
+      <table class="table text-center" style="table-layout : fixed;">
         <tr>
           <td>{{x['code_date']}}</td>
           <td>{{x['announcement_category']}}</td>
-          <td><a href="/announcement/{{x['search_id']}}"><p style='width: 200px;'>{{x['subject']}}</p></a></td>
+          <td><a href="/announcement/{{x['search_id']}}">
+              <p>{{x['subject']}}</p>
+            </a></td>
         </tr>
       </table>
     </div>
