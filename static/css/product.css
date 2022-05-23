@@ -32,9 +32,10 @@ body {
     text-decoration: none;
 }
 
-.site-header button a{
+.site-header button a {
     color: white;
 }
+
 
 /*
    * Dummy devices (replace them with your own or something else entirely!)
@@ -108,14 +109,41 @@ body {
 }
 
 @media (min-width: 960px) {
-    .nav-item button{
+    .nav-item button {
         margin-left: 10px;
     }
 }
 
 @media (max-width: 960px) {
-    .nav-item button{
+    .nav-item button {
         margin-top: 10px;
         margin-right: 10px;
     }
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
